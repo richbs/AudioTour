@@ -119,7 +119,7 @@
 <div data-role="page" data-theme="a" id="object1-more"></div>
 <div data-role="page" data-theme="a" id="object2">
 <div data-role="header">
-<h1>Head of a Fish<span class="ui-li-count">44</span></h1>
+<h1>Head of a Hat<span class="ui-li-count">44</span></h1>
 </div>
 <div data-role="content">
 <p><img src="images/va/object2.jpg" /></p>
@@ -251,5 +251,21 @@
 </div>
 </div>
 <div data-role="page" data-theme="a" id="object10-more"></div>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("a.play-control").click(function(e){
+		var playbutton = e.target;
+		$(playbutton).text("Pause");
+		// Get parent
+		var parentpage = $(playbutton).parents('div[data-role="page"]');
+		var audiotag = $(parentpage).find('audio')[0];
+		audiotag.play();
+		
+	})
+
+	
+})
+</script>
 </body>
 </html>
