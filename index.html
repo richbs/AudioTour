@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.manifest">
 <head>
 <meta charset="UTF-8">
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -68,18 +68,6 @@
     <h2><a href="#object7">Object 7</a></h2>
     <p>Head of a Seventh<span class="ui-li-count">77</span></p>
     </li>
-    <li>
-    <h2><a href="#object8">Object 8</a></h2>
-    <p>Head of an Eighth<span class="ui-li-count">88</span></p>
-    </li>
-    <li>
-    <h2><a href="#object9">Object 9</a></h2>
-    <p>Head of a Ninth<span class="ui-li-count">99</span></p>
-    </li>
-    <li>
-    <h2><a href="#object10">Object 10</a></h2>
-    <p>Head of a Tenth<span class="ui-li-count">10g</span></p>
-    </li>
 </ul>
 </div>
 <div data-role="footer" data-position="fixed" class="ui-grid-a"><a
@@ -90,7 +78,7 @@
 <h1>Introduction</h1>
 </div>
 <div data-role="content">
-<p><img src="images/va/object1.jpg" /></p>
+<p><img src="images/va/intro.jpg" /></p>
 <p><audio src="audio/intro.mp3" id="audiointro"/></p>
 </div>
 <div data-role="footer" class="ui-grid-b">
@@ -207,62 +195,43 @@
 </div>
 </div>
 <div data-role="page" data-theme="a" id="object7-more"></div>
-<div data-role="page" data-theme="a" id="object8">
-<div data-role="header">
-<h1>Head of an Eighth<span class="ui-li-count">88</span></h1>
-</div>
-<div data-role="content">
-<p><img src="images/va/object8.jpg" /></p>
-<p><audio src="audio/audio8.mp3" /></p>
-</div>
-<div data-role="footer" class="ui-grid-b">
-<a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
-<a href="#" class="play-control ui-block-b" data-role="button">Play</a>
-<a href="#object9" class="ui-block-c">Next</a>
-</div>
-</div>
-<div data-role="page" data-theme="a" id="object8-more"></div>
-<div data-role="page" data-theme="a" id="object9">
-<div data-role="header">
-<h1>Head of a Ninth<span class="ui-li-count">47</span></h1>
-</div>
-<div data-role="content">
-<p><img src="images/va/object9.jpg" /></p>
-<p><audio src="audio/audio9.mp3" /></p>
-</div>
-<div data-role="footer" class="ui-grid-b">
-<a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
-<a href="#" class="play-control ui-block-b" data-role="button">Play</a>
-<a href="#object10" class="ui-block-c">Next</a>
-</div>
-</div>
-<div data-role="page" data-theme="a" id="object9-more"></div>
-<div data-role="page" data-theme="a" id="object10">
-<div data-role="header">
-<h1>Head of a Tenth<span class="ui-li-count">10</span></h1>
-</div>
-<div data-role="content">
-<p><img src="images/va/object10.jpg" /></p>
-<p><audio src="audio/audio10.mp3" /></p>
-</div>
-<div data-role="footer" class="ui-grid-b">
-<a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
-<a href="#" class="play-control ui-block-b" data-role="button">Play</a>
-</div>
-</div>
-<div data-role="page" data-theme="a" id="object10-more"></div>
+
 <script type="text/javascript">
 $(document).ready(function(){
 
 	$("a.play-control").click(function(e){
-		var playbutton = e.target;
-		$(playbutton).text("Pause");
-		// Get parent
+		
+		var playbutton;
+		if ( e.target.tagName == 'SPAN' ) {
+			 playbutton = $(e.target).parent('A')[0];
+			
+		} else {
+			playbutton = e.target;	
+		}
+		console.log(playbutton);
 		var parentpage = $(playbutton).parents('div[data-role="page"]');
 		var audiotag = $(parentpage).find('audio')[0];
-		audiotag.play();
+		console.log(audiotag);
+		if ($(playbutton).hasClass('now-playing')) {
+			$(playbutton).children('span.ui-btn-txt').text("Play");
+			$(playbutton).removeClass('now-playing ui-btn-down-a')
+			$(playbutton).addClass('ui-btn-up-a');
+			// Get parent
+			audiotag.pause();
+
+			
+		} else {
+			$(playbutton).children('span.ui-btn-txt').text("Pause");
+			$(playbutton).removeClass('ui-btn-up-a')
+			$(playbutton).addClass('ui-btn-down-a now-playing');
+			// Get parent
+			audiotag.play();
+			
+		}
+		return false;
 		
 	})
+
 
 	
 })
