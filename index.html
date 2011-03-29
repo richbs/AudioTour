@@ -10,7 +10,7 @@
 <script type="text/javascript" src="js/jquery.mobile.js"></script>
 </head>
 <body>
-<div data-role="page" data-theme="a" data-theme="a" id="start">
+<div data-role="page" data-theme="a" id="start">
 <div data-role="header" id="hd-audio-tour">
 <h1>Audio Tour</h1>
 </div>
@@ -24,7 +24,7 @@
 </div>
 <div data-role="content">
 <p><img src="images/va/instructions.jpg" /></p>
-<p><audio src="audio/instructions.mp3" /></p>
+<p><audio src="audio/instructions.mp3"></audio></p>
 </div>
 <div data-role="footer" class="ui-grid-b">
 <a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
@@ -68,6 +68,18 @@
     <h2><a href="#object7">Object 7</a></h2>
     <p>Head of a Seventh<span class="ui-li-count">77</span></p>
     </li>
+    <li>
+    <h2><a href="#object8">Object 8</a></h2>
+    <p>Head of an Eighth<span class="ui-li-count">88</span></p>
+    </li>
+    <li>
+    <h2><a href="#object9">Object 9</a></h2>
+    <p>Head of a Ninth<span class="ui-li-count">99</span></p>
+    </li>
+    <li>
+    <h2><a href="#object10">Object 10</a></h2>
+    <p>Head of a Tenth<span class="ui-li-count">10g</span></p>
+    </li>
 </ul>
 </div>
 <div data-role="footer" data-position="fixed" class="ui-grid-a"><a
@@ -79,24 +91,21 @@
 </div>
 <div data-role="content">
 <p><img src="images/va/intro.jpg" /></p>
-<p><audio src="audio/intro.mp3" id="audiointro"/></p>
+<p><audio src="audio/intro.mp3" id="audiointro"></audio></p>
 </div>
 <div data-role="footer" class="ui-grid-b">
 <a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
-<a class="ui-block-b" data-role="button">Play</a>
+<a class="play-control ui-block-b" data-role="button">Play</a>
 <a href="#object1" class="ui-block-c">Next</a>
 </div>
 </div>
-</div>
-
-
 <div data-role="page" data-theme="a" id="object1">
 <div data-role="header">
 <h1>Head of a Bodhisattva<span class="ui-li-count">44</span></h1>
 </div>
 <div data-role="content">
 <p><img src="images/va/object1.jpg" /></p>
-<p><audio src="audio/audio1.mp3" /></p>
+<p><audio src="audio/audio1.mp3"></audio></p>
 </div>
 <div data-role="footer" class="ui-grid-b">
 <a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
@@ -107,11 +116,11 @@
 <div data-role="page" data-theme="a" id="object1-more"></div>
 <div data-role="page" data-theme="a" id="object2">
 <div data-role="header">
-<h1>Head of a Hat<span class="ui-li-count">44</span></h1>
+<h1>Object 2<span class="ui-li-count">44</span></h1>
 </div>
 <div data-role="content">
 <p><img src="images/va/object2.jpg" /></p>
-<p><audio src="audio/audio2.mp3" /></p>
+<p><audio src="audio/audio2.mp3"></audio></p>
 </div>
 <div data-role="footer" class="ui-grid-b">
 <a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
@@ -122,11 +131,11 @@
 <div data-role="page" data-theme="a" id="object2-more"></div>
 <div data-role="page" data-theme="a" id="object3">
 <div data-role="header">
-<h1>Head of a Corporation<span class="ui-li-count">44</span></h1>
+<h1>Object 3<span class="ui-li-count">44</span></h1>
 </div>
 <div data-role="content">
 <p><img src="images/va/object3.jpg" /></p>
-<p><audio src="audio/audio3.mp3" /></p>
+<p><audio src="audio/audio3.mp3"></audio></p>
 </div>
 <div data-role="footer" class="ui-grid-b">
 <a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
@@ -137,11 +146,11 @@
 <div data-role="page" data-theme="a" id="object3-more"></div>
 <div data-role="page" data-theme="a" id="object4">
 <div data-role="header">
-<h1>Head of a Something<span class="ui-li-count">44</span></h1>
+<h1>Object 4<span class="ui-li-count">44</span></h1>
 </div>
 <div data-role="content">
 <p><img src="images/va/object4.jpg" /></p>
-<p><audio src="audio/audio4.mp3" /></p>
+<p><audio src="audio/audio4.mp3"></audio></p>
 </div>
 <div data-role="footer" class="ui-grid-b">
 <a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
@@ -152,11 +161,11 @@
 <div data-role="page" data-theme="a" id="object4-more"></div>
 <div data-role="page" data-theme="a" id="object5">
 <div data-role="header">
-<h1>Head of a Fifth<span class="ui-li-count">47</span></h1>
+<h1>Object 5<span class="ui-li-count">47</span></h1>
 </div>
 <div data-role="content">
 <p><img src="images/va/object5.jpg" /></p>
-<p><audio src="audio/audio5.mp3" /></p>
+<p><audio src="audio/audio5.mp3"></audio></p>
 </div>
 <div data-role="footer" class="ui-grid-b">
 <a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
@@ -167,11 +176,11 @@
 <div data-role="page" data-theme="a" id="object5-more"></div>
 <div data-role="page" data-theme="a" id="object6">
 <div data-role="header">
-<h1>Head of a Sixth<span class="ui-li-count">3457</span></h1>
+<h1>Object 6<span class="ui-li-count">3457</span></h1>
 </div>
 <div data-role="content">
 <p><img src="images/va/object6.jpg" /></p>
-<p><audio src="audio/audio6.mp3" /></p>
+<p><audio src="audio/audio6.mp3"></audio></p>
 </div>
 <div data-role="footer" class="ui-grid-b">
 <a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
@@ -182,11 +191,11 @@
 <div data-role="page" data-theme="a" id="object6-more"></div>
 <div data-role="page" data-theme="a" id="object7">
 <div data-role="header">
-<h1>Head of a Seventh<span class="ui-li-count">777</span></h1>
+<h1>Object 7<span class="ui-li-count">777</span></h1>
 </div>
 <div data-role="content">
 <p><img src="images/va/object7.jpg" /></p>
-<p><audio src="audio/audio7.mp3" /></p>
+<p><audio src="audio/audio7.mp3"></audio></p>
 </div>
 <div data-role="footer" class="ui-grid-b">
 <a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
@@ -195,8 +204,59 @@
 </div>
 </div>
 <div data-role="page" data-theme="a" id="object7-more"></div>
-
+<div data-role="page" data-theme="a" id="object8">
+<div data-role="header">
+<h1>Object 8<span class="ui-li-count">88</span></h1>
+</div>
+<div data-role="content">
+<p><img src="images/va/object8.jpg" /></p>
+<p><audio src="audio/audio8.mp3"></audio></p>
+</div>
+<div data-role="footer" class="ui-grid-b">
+<a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
+<a href="#" class="play-control ui-block-b" data-role="button">Play</a>
+<a href="#object9" class="ui-block-c">Next</a>
+</div>
+</div>
+<div data-role="page" data-theme="a" id="object8-more"></div>
+<div data-role="page" data-theme="a" id="object9">
+<div data-role="header">
+<h1>Object 9<span class="ui-li-count">47</span></h1>
+</div>
+<div data-role="content">
+<p><img src="images/va/object9.jpg" /></p>
+<p><audio src="audio/audio9.mp3"></audio></p>
+</div>
+<div data-role="footer" class="ui-grid-b">
+<a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
+<a href="#" class="play-control ui-block-b" data-role="button">Play</a>
+<a href="#object10" class="ui-block-c">Next</a>
+</div>
+</div>
+<div data-role="page" data-theme="a" id="object9-more"></div>
+<div data-role="page" data-theme="a" id="object10">
+<div data-role="header">
+<h1>Object 10<span class="ui-li-count">10</span></h1>
+</div>
+<div data-role="content">
+<p><img src="images/va/object10.jpg" /></p>
+<p><audio src="audio/audio10.mp3"></audio></p>
+</div>
+<div data-role="footer" class="ui-grid-b">
+<a href="#menu" class="ui-block-a" data-direction="reverse">Menu</a>
+<a href="#" class="play-control ui-block-b" data-role="button">Play</a>
+</div>
+</div>
+<div data-role="page" data-theme="a" id="object10-more"></div>
 <script type="text/javascript">
+
+function get_audio_element(playbutton){
+
+    var parentpage = $(playbutton).parents('div[data-role="page"]');
+    var audiotag = $(parentpage).find('audio')[0];
+	return audiotag;
+}
+
 $(document).ready(function(){
 
 	$("a.play-control").click(function(e){
@@ -208,12 +268,11 @@ $(document).ready(function(){
 		} else {
 			playbutton = e.target;	
 		}
-		console.log(playbutton);
-		var parentpage = $(playbutton).parents('div[data-role="page"]');
-		var audiotag = $(parentpage).find('audio')[0];
-		console.log(audiotag);
+		
+		var audiotag = get_audio_element(playbutton);
 		if ($(playbutton).hasClass('now-playing')) {
-			$(playbutton).children('span.ui-btn-txt').text("Play");
+            buttontext_span = $(playbutton).find('span.ui-btn-text');
+			$(buttontext_span).text("Play");
 			$(playbutton).removeClass('now-playing ui-btn-down-a')
 			$(playbutton).addClass('ui-btn-up-a');
 			// Get parent
@@ -221,15 +280,19 @@ $(document).ready(function(){
 
 			
 		} else {
-			$(playbutton).children('span.ui-btn-txt').text("Pause");
+			/*
+	          Stop all playing audios and play this one		
+   			//console.log($('a.now-playing'));
+			Use a function
+			*/
+			buttontext_span = $(playbutton).find('span.ui-btn-text')[0];
+			$(buttontext_span).text("Pause");
 			$(playbutton).removeClass('ui-btn-up-a')
 			$(playbutton).addClass('ui-btn-down-a now-playing');
 			// Get parent
 			audiotag.play();
 			
-		}
-		return false;
-		
+		}		
 	})
 
 
